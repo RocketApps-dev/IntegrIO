@@ -4,6 +4,7 @@ import { Controller, Control } from 'react-hook-form';
 
 import FeaIcons from 'react-native-vector-icons/Feather';
 import MatIcons from 'react-native-vector-icons/MaterialIcons';
+import EntIcon from 'react-native-vector-icons/Entypo';
 
 import * as S from './styles';
 
@@ -12,7 +13,7 @@ type Props = {
   name: string;
   icon?: string;
   control: Control;
-  iconType?: 'Fea' | 'Mat';
+  iconType?: 'Fea' | 'Mat' | 'Ent';
   isSecureText?: boolean;
 };
 
@@ -31,6 +32,8 @@ export const Input: React.FC<Props> = ({
     switch (iconType) {
       case 'Fea':
         return <FeaIcons name={iconEye} size={24} color="#000" />;
+      case 'Ent':
+        return <EntIcon name={iconEye} size={24} color="#000" />;
       default:
         return <MatIcons name="content-paste" size={24} color="#000" />;
     }

@@ -9,7 +9,7 @@ export const BoxInput = styled.View`
 
   margin-top: 10px;
 
-  padding-left: 20px;
+  padding-left: 10px;
 
   flex-direction: row;
 `;
@@ -25,9 +25,9 @@ export const TextInput = styled.TextInput`
 `;
 
 export const InputArea = styled.TextInput`
-  margin-left: 70px;
+  /* margin-left: 50px; */
 
-  width: 120px;
+  width: 175px;
 
   font-family: 'Spartan';
   font-style: normal;
@@ -44,4 +44,7 @@ export const ContainerIcon = styled.TouchableOpacity`
 
   justify-content: center;
   align-items: center;
+
+  position: absolute;
+  right: 10px;
 `;

@@ -1,19 +1,19 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigation } from '@react-navigation/native';
 import {
   KeyboardAvoidingView,
   Platform,
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useForm } from 'react-hook-form';
-import { useNavigation } from '@react-navigation/native';
 
 import { Button, Input } from '../../../components';
 
 import * as S from './styles';
 
-export const SignIn: React.FC = () => {
-  const { handleSubmit, control } = useForm();
+export const SignUp: React.FC = () => {
+  const { control } = useForm();
 
   const navigation = useNavigation();
 
@@ -28,10 +28,18 @@ export const SignIn: React.FC = () => {
         />
         <S.LogoImg source={require('../../../assets/logo2.png')} />
         <S.ContainerInputs>
+        <Input
+            control={control}
+            name="userId"
+            title="Digite seu nome"
+            icon="user"
+            iconType="Ent"
+          />
+          <View style={{ height: 20 }} />
           <Input
             control={control}
             name="userId"
-            title="Digite seu ID"
+            title="Digite seu email"
             icon="email"
             iconType="Ent"
           />
@@ -47,14 +55,13 @@ export const SignIn: React.FC = () => {
         </S.ContainerInputs>
 
         <S.ContainerBottom>
-          <Button title="Acessar" onPress={() => {}} />
+          <Button title="Criar conta" onPress={() => {}} />
           <TouchableOpacity
-            onPress={() => navigation.navigate('SignUp' as never)}
+            onPress={() => navigation.navigate('SignIn' as never)}
             style={{ marginBottom: 10, marginTop: 5, flexDirection: 'row' }}>
-            <S.TextBottom>Ainda não possui uma conta? </S.TextBottom>
-            <S.TextBottom style={{ color: '#000' }}>Registre-se</S.TextBottom>
+            <S.TextBottom>Já possui uma conta? </S.TextBottom>
+            <S.TextBottom style={{ color: '#000' }}>Entre</S.TextBottom>
           </TouchableOpacity>
-
           <S.TextBottom>Seus dados pessoais estão seguros conosco</S.TextBottom>
           <S.TextBottom>
             Read our Privacy Policy and Terms and Conditions

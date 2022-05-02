@@ -13,7 +13,6 @@ export const ContainerPage = styled.View`
 
 export const BoxButtons = styled.View`
   width: 100%;
-  height: 90%;
 
   align-items: center;
 `;
@@ -34,14 +33,11 @@ export const TitleTransferBox = styled.Text`
   left: 10px;
 `;
 
-export const RowButtons = styled.View`
+export const ContainerList = styled.View`
   width: 100%;
-  
-  flex-direction: row;
-  
+  height: 500px;
+
   align-items: center;
-  justify-content: center;
 
-  margin-left: 10px;
+  margin-top: 10px;
 `;
-
